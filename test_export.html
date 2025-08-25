@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Export Functionality</title>
+</head>
+<body>
+    <h1>Test Export Downloads</h1>
+    <button onclick="testCSVExport()">Test CSV Export</button>
+    <button onclick="testJSONExport()">Test JSON Export</button>
+    
+    <script>
+        function testCSVExport() {
+            const data = [
+                { usdot: '123456', name: 'Test Carrier 1', insurance_company: 'Progressive', expiry: '2024-02-15' },
+                { usdot: '789012', name: 'Test Carrier 2', insurance_company: 'Nationwide', expiry: '2024-03-20' }
+            ];
+            
+            const headers = Object.keys(data[0]).join(',');
+            const rows = data.map(row => Object.values(row).join(',')).join('\n');
+            const csv = headers + '\n' + rows;
+            
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'test_export.csv';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 100);
+            
+            console.log('CSV export triggered');
+        }
+        
+        function testJSONExport() {
+            const data = [
+                { usdot: '123456', name: 'Test Carrier 1', insurance_company: 'Progressive', expiry: '2024-02-15' },
+                { usdot: '789012', name: 'Test Carrier 2', insurance_company: 'Nationwide', expiry: '2024-03-20' }
+            ];
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json;charset=utf-8;' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'test_export.json';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 100);
+            
+            console.log('JSON export triggered');
+        }
+    </script>
+</body>
+</html>

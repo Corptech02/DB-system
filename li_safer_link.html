@@ -1,0 +1,464 @@
+<html>
+<head>
+<title>Licensing & Insurance Carrier Search</title>
+<html>
+<head>
+<title>FMCSA Licensing and Insurance Web Site</title>
+<script type="text/javascript" src="/lihtml/entourage.js"></script>
+<script type="text/javascript" src="/lihtml/googleanalytics.js"></script>
+<script type="text/javascript" src="/lihtml/dot_analytics.js"></script>
+<noscript>Script edits data entry fields for valid data and required field.  The application may not work correctly without these scripts.</noscript>
+</head>
+<SCRIPT SRC="/lihtml/calendar.js"></SCRIPT>
+<NOSCRIPT>Script provides pop-up calendar.  The application may not work correctly without this script</NOSCRIPT>
+<script language="JavaScript">
+         <!--
+           function CheckMenu(form)
+           {
+           for (i=0; i < form.elements.length; i++){
+             if (form.elements[i].type == "select-one"){
+              j = form.elements[i].selectedIndex;
+               if (j == 0) {
+                alert( "Please Select a Menu Option." );
+                form.elements[i].focus();
+                return false;
+               }
+               else {
+               return true;
+               }
+              }
+            }
+           }
+         // -->
+         </script>
+<NOSCRIPT>Script edits selection as a required field.  The application may not work correctly without this script</NOSCRIPT>
+<link rel="stylesheet" href="/lihtml/li.css">
+<body bgcolor="#ffffff"><font size=2 face="Arial, Helvetica">
+<a href="#skiplink"><img src="blank.gif" alt="Skip to Main Content" width=1 height=1 border=0></a>
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                 <td style="position:relative;">
+                   <div style="position:relative;">
+                   <img src="/lihtml/l_i_logo_public.gif" alt="FMCSA License and Insurance logo" />
+<div style="position:absolute;  top:40px; right:10px;">
+<table border="0" cellspacing="0" cellpadding="0" align="right" SUMMARY="Table used for formatting purposes only">
+<tr><td align=right>
+<form action="/LIVIEW/pkg_menu.prc_menu" method="post" name="Dropdown" onSubmit="return CheckMenu(this)">
+<font size=-15 color="white"><label for="menu">Menu</label></font><font size=3 "white" face="Arial, Helvetica"></font>
+<select id="menu" name="pv_choice">
+<option selected value="ZZZ">Choose Menu Option
+<option value=BOC3>BOC3 Filing
+<option value=BL_COMP>Blanket Companies
+<option value=CARR_SEARCH>Carrier Search
+<option value=FED_REG>FMCSA Register
+<option value=HOME>Home Page
+<option value=INS>Insurance Filing
+<option value=MXTRK>Mex Application Status
+<option value=OOS_LIST>Out Of Service Carriers
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="/lihtml/go.gif" align=absmiddle ALT="Menu Go">
+<input type="hidden" name="pv_vpath" value="LIVIEW" />
+</form>
+</td>
+</tr>
+</table>
+</div>
+</div></td>
+</tr></table>
+<a name="skiplink"></a>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script language=javascript>
+  <!--
+     function isEmpty(inputStr1, inputStr2, inputStr3, inputStr4, inputStr5)
+     {
+      //if ((inputStr1.value == "" || inputStr1.value == null) &&
+      //    (inputStr2.value == "" || inputStr2.value == null) &&
+      //    (inputStr3.value == "" || inputStr3.value == null) &&
+      //    (inputStr4.value == "" || inputStr4.value == null) &&
+      //    (inputStr5.value == "" || inputStr5.value == null || inputStr5.value=="~~"))
+
+      if ((inputStr1.value == "") &&
+          (inputStr2.value == "") &&
+          (inputStr3.value == "") &&
+          (inputStr4.value == "") &&
+          ((inputStr5.value == "") || (inputStr5.value=="~~")))
+      {
+       inputStr1.focus();
+       return true;
+      }
+      return false;
+     }
+
+     function isEmpty2(inputStr1, inputStr2, inputStr3)
+     {
+      //if ((inputStr1.value == "" || inputStr1.value == null) &&
+      //    (inputStr2.value == "" || inputStr2.value == null) &&
+      //    (inputStr3.value == "" || inputStr3.value == null || inputStr3.value=="~~"))
+      if ((inputStr1.value == "") &&
+         (inputStr2.value == "") &&
+         ((inputStr3.value == "")||(inputStr3.value=="~~")))
+      {
+       inputStr3.focus();
+       return true;
+      }
+      return false;
+     }
+
+     function isInteger(theElement)
+     {
+      var x = Math.floor(theElement.value)
+      if (( x != theElement.value ) || ( x < 0 ))
+      {
+       theElement.focus();
+       return true;
+      }
+      return false;
+     }
+
+     function isValid(n_dotno, n_docketno, s_legalname, s_dbaname, s_state) {
+
+       document.getElementsByName("g_recaptcha_response")[0].value  = document.getElementsByName("g-recaptcha-response")[0].value;
+       document.getElementsByName("g-recaptcha-response")[0].disabled = true;
+
+       if (isEmpty(n_dotno, n_docketno, s_legalname, s_dbaname, s_state)) {
+               alert("The entries are empty. Please try again.");
+               return false;
+       } else {
+         if (isEmpty2(n_dotno, n_docketno, s_state)) {
+            alert("Queries for name only will take too long. Please enter state as well to limit your query.");
+            return false;
+         } else {
+           if (isInteger(n_dotno)) {
+              alert("Sorry, Your Entry for USDOT Number Must Be a Valid Integer.");
+              return false;
+           } else {
+             if (isInteger(n_docketno)) {
+                alert("Sorry, Your Entry for Docket Number Must Be a Valid Integer.");
+                return false;
+             }
+           }
+         }
+       }
+       return true;
+     }
+  // -->
+  </script>
+<noscript> Script checks for verifications. The application may not work correctly without this script</noscript>
+</head>
+<br />
+Enter information for query.
+         If you know the <b><font color="#cc3300">USDOT Number</font></b> or <b><font color="#cc3300">Docket Number</font></b>,
+         that is all that needs to be entered. If you do not know the <b><font color="#cc3300">USDOT Number</font></b>
+         or <b><font color="#cc3300">Docket Number</font></b>, you can search on any combination of
+         <b><font color="#cc3300">Legal Name, DBA Name (Doing-Business-As Name)</font></b>, or <b><font color="#cc3300">State</font></b>
+         to narrow the search. If searching by name please use a state to limit the search. The search always looks for a legal or DBA name which begins with the
+         text entered.  If the wild card character <b><font color="#cc3300">( * )</font></b> is the first position entered, the search will
+         look for a legal or DBA name which contains the text entered, but this search will take longer.
+         <br><br><center><font color="#cc3300"><B>Please enter the challenge question.</B></font>
+         <form action="/LIVIEW/pkg_carrquery.prc_carrlist" method="post" name="search">
+         <table SUMMARY="table used for formatting purposes only">
+         <tr>
+            <td align=right>
+               <b><font color="#336699" face="Arial, Helvetica" size=+1><label for="usdot_number">USDOT Number:</label></font></b>
+            </td>
+            <td>
+              <input type="text" id="usdot_number" NAME="n_dotno" value="905413" MAXLENGTH="8" size="27">
+            </td>
+         </tr>
+         <tr>
+            <td align=right>
+               <b><font color="#336699" face="Arial, Helvetica" size=+1><label for="docket_number">Docket Number:</label></font></b>
+            </td>
+            <td>
+               <select NAME="s_prefix" id="docket_number" size="1">
+                  <option  value="MC">MC
+                  <option >FF
+                  <option >MX
+               </select>
+               <input type="text" id="docket_number" NAME="n_docketno" value="" MAXLENGTH="8" size="20">
+            </td>
+         </tr>
+         <tr>
+            <td align=right>
+               <b><font color="#336699" face="Arial, Helvetica" size=+1><label for="legal_name">Legal Name:</label></font></b>
+            </td>
+            <td>
+               <input type="text" NAME="s_legalname" id="legal_name" value="" MAXLENGTH="120" size="27">
+            </td>
+         </tr>
+         <tr>
+            <td align=right>
+               <b><font color="#336699" face="Arial, Helvetica" size=+1><label for="dba_name">DBA Name:</label></font></b>
+            </td>
+            <td>
+               <input type="text" NAME="s_dbaname" id="dba_name" value="" MAXLENGTH="60" size="27">
+            </td>
+         </tr>
+         <tr>
+            <td align=right>
+               <b><font color="#336699" face="Arial, Helvetica" size=+1><label for="state">State:</label></font></b>
+            </td>
+            <td>
+<select name = "s_state" id="state">
+<option value="~~">Select State/Country
+<option value=ALUS>ALABAMA
+<option value=AKUS>ALASKA
+<option value=ASUS>AMERICAN SAMOA
+<option value=AZUS>ARIZONA
+<option value=ARUS>ARKANSAS
+<option value=CAUS>CALIFORNIA
+<option value=COUS>COLORADO
+<option value=CTUS>CONNECTICUT
+<option value=DEUS>DELAWARE
+<option value=DCUS>DISTRICT OF COLUMBIA
+<option value=FMUS>FEDERATED STATES OF MICRONESIA
+<option value=FLUS>FLORIDA
+<option value=GAUS>GEORGIA
+<option value=GUUS>GUAM
+<option value=HIUS>HAWAII
+<option value=IDUS>IDAHO
+<option value=ILUS>ILLINOIS
+<option value=INUS>INDIANA
+<option value=IAUS>IOWA
+<option value=KSUS>KANSAS
+<option value=KYUS>KENTUCKY
+<option value=LAUS>LOUISIANA
+<option value=MEUS>MAINE
+<option value=MHUS>MARSHALL ISLANDS
+<option value=MDUS>MARYLAND
+<option value=MAUS>MASSACHUSETTS
+<option value=MIUS>MICHIGAN
+<option value=MNUS>MINNESOTA
+<option value=MSUS>MISSISSIPPI
+<option value=MOUS>MISSOURI
+<option value=MTUS>MONTANA
+<option value=NEUS>NEBRASKA
+<option value=NVUS>NEVADA
+<option value=NHUS>NEW HAMPSHIRE
+<option value=NJUS>NEW JERSEY
+<option value=NMUS>NEW MEXICO
+<option value=NYUS>NEW YORK
+<option value=NCUS>NORTH CAROLINA
+<option value=NDUS>NORTH DAKOTA
+<option value=MPUS>NORTHERN MARIANA ISLANDS
+<option value=OHUS>OHIO
+<option value=OKUS>OKLAHOMA
+<option value=ORUS>OREGON
+<option value=PWUS>PALAU
+<option value=PAUS>PENNSYLVANIA
+<option value=PRUS>PUERTO RICO
+<option value=RIUS>RHODE ISLAND
+<option value=SCUS>SOUTH CAROLINA
+<option value=SDUS>SOUTH DAKOTA
+<option value=TNUS>TENNESSEE
+<option value=TXUS>TEXAS
+<option value=UMUS>U.S. MINOR OUTLYING ISLANDS
+<option value=XXUS>UNKNOWN STATE
+<option value=AAUS>US ARMED FORCES - AMERICAS
+<option value=AEUS>US ARMED FORCES - EUROPE
+<option value=APUS>US ARMED FORCES - PACIFIC
+<option value=UTUS>UTAH
+<option value=VTUS>VERMONT
+<option value=VIUS>VIRGIN ISLANDS
+<option value=VAUS>VIRGINIA
+<option value=WAUS>WASHINGTON
+<option value=WVUS>WEST VIRGINIA
+<option value=WIUS>WISCONSIN
+<option value=WYUS>WYOMING
+<option value=AGMX>AGUASCALIENTES, MEXICO
+<option value=BAMX>BAJA CALIFORNIA, MEXICO
+<option value=BCMX>BAJA CALIFORNIA SUR, MEXICO
+<option value=CAMX>CAMPECHE, MEXICO
+<option value=CPMX>CHIAPAS, MEXICO
+<option value=CHMX>CHIHUAHUA, MEXICO
+<option value=COMX>COAHUILA, MEXICO
+<option value=CLMX>COLIMA, MEXICO
+<option value=DFMX>DISTRITO FEDERAL, MEXICO
+<option value=DUMX>DURANGO, MEXICO
+<option value=GJMX>GUANAJUATO, MEXICO
+<option value=GRMX>GUERRERO, MEXICO
+<option value=HDMX>HIDALGO, MEXICO
+<option value=JLMX>JALISCO, MEXICO
+<option value=MXMX>MEXICO, MEXICO
+<option value=MCMX>MICHOACAN, MEXICO
+<option value=MRMX>MORELOS, MEXICO
+<option value=NAMX>NAYARIT, MEXICO
+<option value=NLMX>NUEVO LEON, MEXICO
+<option value=OAMX>OAXACA, MEXICO
+<option value=PUMX>PUEBLA, MEXICO
+<option value=QUMX>QUERETARO, MEXICO
+<option value=QRMX>QUINTANA ROO, MEXICO
+<option value=SLMX>SAN LUIS POTOSI, MEXICO
+<option value=SIMX>SINALOA, MEXICO
+<option value=SOMX>SONORA, MEXICO
+<option value=TAMX>TABASCO, MEXICO
+<option value=TMMX>TAMAULIPAS, MEXICO
+<option value=TLMX>TLAXCALA, MEXICO
+<option value=VEMX>VERACRUZ, MEXICO
+<option value=YUMX>YUCATAN, MEXICO
+<option value=ZAMX>ZACATECAS, MEXICO
+<option value=ABCA>ALBERTA, CANADA
+<option value=BCCA>BRITISH COLUMBIA, CANADA
+<option value=CACA>CANADA, CANADA
+<option value=MBCA>MANITOBA, CANADA
+<option value=NBCA>NEW BRUNSWICK, CANADA
+<option value=NLCA>NEWFOUNDLAND, CANADA
+<option value=NTCA>NORTHWEST TERRITORIES, CANADA
+<option value=NSCA>NOVA SCOTIA, CANADA
+<option value=NUCA>NUNAVUT, CANADA
+<option value=ONCA>ONTARIO, CANADA
+<option value=PECA>PRINCE EDWARD ISLAND, CANADA
+<option value=QCCA>PROVINCE OF QUEBEC, CANADA
+<option value=SKCA>SASKATCHEWAN, CANADA
+<option value=YTCA>YUKON TERRITORY, CANADA
+</select>
+</td></tr>
+<tr>
+<table align="center" width="80%" class="table_without_border" SUMMARY="">
+<tr>
+<td colspan="2" align="center"><div class="g-recaptcha" data-sitekey="6Ldbx1gUAAAAAMEylxZ_DoZS430WhNsmV47Y5t58"></div></td>
+<input type="hidden" name="g_recaptcha_response" value="">
+</tr>
+</table>
+</tr>
+<tr><table><tr>
+            <td align=center colspan="2"><font size="2" color="blue">New applications will not be reflected in search results for 24 hours after filing</font></td>
+            </tr></table></tr>
+<tr>
+         <td align=center colspan="2">
+         <input type="submit"  value="   Search   " OnClick="return isValid(n_dotno, n_docketno, s_legalname, s_dbaname, s_state);">
+<input type="reset"   value="   Reset    ">
+<input type="hidden" name="pv_vpath" value="LIVIEW">
+         </td>
+         <td></td>
+         </tr>
+         </table>
+         </form>
+</center>
+<script language="JavaScript">
+      <!--
+      function another_window(h_name)
+      {
+      window.open(h_name);
+      return;
+      }
+      // -->
+      </script>
+<NOSCRIPT>Displays another window.  The application may not work correctly without this script</NOSCRIPT>
+</center>
+<br />
+<SPAN class="footer_title_text" align="left"> August 25, 2025</SPAN>
+<center>
+<style type="text/css">
+
+    a.footer_link:link, a.footer_link:visited, a.footer_link:hover, a.footer_link:active
+    {
+    font-size: 10px; font-family: Arial;
+    color: rgb(102,102,102);
+    font-weight: normal;
+    text-decoration: none;
+    }
+
+    a.footer_link:visited
+    {
+    font-size: 10px;
+    font-family: Arial;
+    }
+
+    a.footer_link:hover
+    {
+    font-size: 10px;
+    color: #012255;
+    text-decoration: underline;
+    font-family: Arial;
+    }
+
+    SPAN.footer_white_text, SPAN.footer_title_text
+    {
+    font-size: 10px; font-family: Arial;
+    color: rgb(102,102,102);
+    font-weight: normal;
+    text-decoration: none;
+    }
+    hr
+    {
+    border: 1;
+    height:1px;
+    color:cccccc;
+    }
+    .vertical-line
+    {
+    width: 1px;
+    height: 60;
+    }
+    .vcontrol
+    {
+    font-size: 4px;
+    font-family: Arial;
+    height:8;
+    }
+  </style>
+<HR width="98%" height="12"></HR>
+<TABLE align= "left" border ="0" cellpadding="0" cellspacing="0">
+<TBODY>
+<tr>
+<TD>
+<img id="NetFYIBigImg" src="/lihtml/logo_footer.gif" Alt="USDOT logo" />
+</TD>
+<TD align="center" width="1">
+<td align="center" width="1" bgcolor="#cccccc"><BR></td>
+<TD align="middle" colSpan="2">
+<td>
+<TABLE align= "center" border ="0" cellpadding="0" cellspacing="0">
+<tr>
+<td align="center">
+<A class="footer_link" href="https://www.fmcsa.dot.gov/" TARGET="_blank" title="FMCSA Home">FMCSA Home</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.dot.gov/" TARGET="_blank" title="DOT Home">DOT Home</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/feedback.htm" TARGET="_blank" title="Go to Feedback">Feedback</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/Online-Privacy-Policy.aspx" TARGET="_blank" title="Go to Privacy Policy">Privacy Policy </A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/redirect.aspx?page=https://www.usa.gov/" TARGET="_blank" title="Go to USA gov">USA.gov</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/foia/foia.htm" TARGET="_blank" title="Go to Freedom of Information Act">Freedom of Information Act (FOIA)</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/508disclaimer.htm" TARGET="_blank" title="Go to Accessibility">Accessibility</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/redirect.aspx?page=https://www.oig.dot.gov/Hotline" TARGET="_blank" title="Go to OIG Hotline"> OIG Hotline </A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/about/WebPoliciesAndImportantLinks.htm" TARGET="_blank" title="Go to Web Policies and Important Links"> Web Policies and Important Links </A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/plugins.htm" TARGET="_blank" title="Get Plug Ins">Plug-ins </A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="/LIVIEW/pkg_li_std_routines.prc_related_sites?pv_vpath=LIVIEW" TARGET="_blank" title="Related Sites">Related Sites</A>
+<SPAN class="footer_white_text">|</SPAN>
+<A class="footer_link" href="/LIVIEW/pkg_li_std_routines.prc_help?pn_pageid=5" TARGET="_blank" title="FMCSA Home">Help</A>
+</td>
+</tr>
+<tr class="vcontrol"><td>&nbsp;</td>
+</tr>
+<tr>
+<td align="center">
+<SPAN class="footer_title_text"> Federal Motor Carrier Safety Administration </SPAN>
+<BR />
+<SPAN class="footer_white_text">1200 New Jersey Avenue SE, Washington, DC 20590 - 1-800-832-5660 - TTY: 1-800-877-8339 - </SPAN>
+<A class="footer_link" href="https://www.fmcsa.dot.gov/about/contact/offices/displayfieldroster.asp" TARGET="_blank" title="Go to Field Office Contacts">  Field Office Contacts </A>
+</TD>
+</tr>
+<tr>
+<TD colSpan="3" height="20"></TD>
+<TD colSpan="3" height="20"></TD>
+<TD colSpan="3" height="20"></TD>
+</tr>
+</table>
+</td>
+</TR>
+</TBODY>
+</table>
+</center>
+</body>
+</html>
+</body>
+</html>

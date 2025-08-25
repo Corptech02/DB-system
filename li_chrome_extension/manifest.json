@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "L&I Insurance Auto-Scraper",
+  "version": "1.0",
+  "description": "Automatically scrapes insurance data from L&I",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://li-public.fmcsa.dot.gov/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://li-public.fmcsa.dot.gov/LIVIEW/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

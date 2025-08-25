@@ -1,0 +1,16 @@
+project-root/
+│── agents/                  # Core agents / services
+│── api/                     # FastAPI endpoints
+│── db/                      # DB schema + migrations
+│── frontend/                # React/Tailwind dashboard
+│── scripts/                 # Utility scripts (ETL, cron jobs)
+│── tests/                   # Unit & integration tests
+│── examples/                # <<< developer reference patterns
+│   │── import_script.py      # Example: API pagination + DB insert
+│   │── query_examples.sql    # Example: Common SQL queries
+│   │── dashboard_demo.py     # Example: Mock API -> frontend flow
+│   │── export_to_csv.py      # Example: Pandas export patterns
+│   │── readme.md             # Explain purpose of each example
+│── .env.example             # Environment variable template
+│── requirements.txt         # Python dependencies
+│── README.md                # Project overview & setup

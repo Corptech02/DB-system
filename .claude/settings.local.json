@@ -17,7 +17,24 @@
       "Bash(python -m pytest:*)",
       "Bash(python3 -m pytest:*)",
       "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "mcp__archon__health_check",
+      "mcp__archon__list_projects",
+      "mcp__archon__update_project",
+      "mcp__archon__create_task",
+      "mcp__archon__perform_rag_query",
+      "mcp__archon__search_code_examples",
+      "mcp__archon__update_task",
+      "Bash(chmod:*)",
+      "Bash(pip3 install:*)",
+      "Bash(curl:*)",
+      "Bash(pip install:*)",
+      "Bash(venv_linux/bin/python:*)",
+      "Bash(venv_linux/bin/pip install fastapi uvicorn aiohttp pandas numpy requests)",
+      "Bash(venv_linux/bin/pip install:*)",
+      "Bash(venv_linux/bin/playwright install:*)",
+      "Bash(venv_linux/bin/uvicorn demo_real_api:app --reload --host 0.0.0.0 --port 8000)"
     ],
     "deny": []
   }

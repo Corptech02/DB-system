@@ -1,0 +1,14 @@
+{
+  "905413": {
+    "insurance_company": "GEICO MARINE INSURANCE COMPANY",
+    "liability_insurance_date": "2024-02-20",
+    "insurance_expiry_date": "2024-02-20",
+    "liability_insurance_amount": 1000000,
+    "policy_number": "9300107451",
+    "form_type": "91X",
+    "insurance_type": "BIPD/Primary",
+    "insurance_data_source": "FMCSA L&I Active Insurance",
+    "insurance_data_type": "real",
+    "cached_at": "2025-08-25T09:45:00.000000"
+  }
+}
